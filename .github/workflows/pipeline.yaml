@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: echo ${{ secrets.TEST }}
+      - run: test=${{ secrets.TEST }}
+      - run: echo $test
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
