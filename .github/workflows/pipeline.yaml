@@ -9,8 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: docker build -t ndjcndcj/github-actions:1.0.0  .
-      - run: docker push ndjcndcj/github-actions:1.0.0
+      - run: echo $Test
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
